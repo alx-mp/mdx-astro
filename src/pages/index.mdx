@@ -2,28 +2,155 @@ import Counter from '../components/Counter.jsx';
 import Title from '../components/Title.astro';
 export const components = { h1: Title };
 
-export const authors = [
-	{ name: 'Jane', email: 'hi@jane.com' },
-	{ name: 'John', twitter: '@john2002' },
-];
-export const published = new Date('2022-02-01');
+# Bienvenido a la Demo de MDX + Astro
 
-# Hello world!
+Este proyecto demuestra **el poder de MDX**: combinar contenido Markdown con componentes interactivos.
 
-Written by: {new Intl.ListFormat('en').format(authors.map(d => d.name))}.
+## ¿Qué es MDX?
 
-Published on: {new Intl.DateTimeFormat('en', {dateStyle: 'long'}).format(published)}.
+MDX es Markdown + JSX. Te permite escribir contenido normal en Markdown, pero también insertar componentes React/Preact/Vue directamente en tu contenido.
 
-<Counter client:idle>This is a **counter**!</Counter>
+<Counter client:idle>Este es un **contador interactivo** de Preact dentro de MDX!</Counter>
 
-## Syntax highlighting
+## ¿Por qué es Poderoso?
 
-We also support syntax highlighting in MDX out-of-the-box! This example uses the default [Shiki](https://shiki.style) theme. See the [MDX integration docs](https://docs.astro.build/en/guides/integrations-guide/mdx/#syntax-highlighting) for configuration options.
+1. **Contenido Limpio** - Escribes en Markdown normal, fácil de leer y editar
+2. **Componentes Reutilizables** - Creas el componente una vez, lo usas en todas partes
+3. **Interactividad** - Puedes agregar funcionalidad compleja sin ensuciar el contenido
+4. **Separación de Responsabilidades** - Los editores editan contenido, los devs manejan la lógica
+
+## Ver la Demo Completa
+
+Hemos creado una **página de producto estilo dropshipping** que muestra todo el poder de MDX:
+
+- ✨ Header de producto con precio y botón de compra
+- 📸 Componente de historias estilo Instagram
+- 🎨 Secciones con fondos abstractos animados
+- 🎥 Showcase de videos
+- 📝 Contenido en Markdown mezclado con componentes
+
+### [👉 Ver Página de Producto](/producto)
+
+## Código de Ejemplo
+
+Así se ve MDX en acción:
+
+```mdx
+# Mi Producto Increíble
+
+Este es texto normal en Markdown. Puedo usar **negrita**, *cursiva*, listas...
+
+<ComponenteInteractivo
+  datos={[1, 2, 3]}
+  activo={true}
+/>
+
+Y seguir escribiendo Markdown después del componente.
+```
+
+## Características del Proyecto
+
+- ⚡ **Astro** - Framework ultra-rápido para sitios de contenido
+- 📝 **MDX** - Markdown con superpoderes
+- ⚛️ **Preact** - Componentes interactivos ligeros
+- 🎨 **CSS Moderno** - Gradientes, animaciones, diseño responsive
+
+---
+
+### Explora la Demo
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0;">
+
+## ¿Listo para ver MDX en acción?
+
+<a href="/producto" style="display: inline-block; background: white; color: #667eea; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 700; margin-top: 1rem;">
+  Ver Página de Producto
+</a>
+
+</div>
+
+---
+
+## Syntax Highlighting
+
+MDX también soporta syntax highlighting! Este ejemplo usa [Shiki](https://shiki.style).
 
 ```astro
 ---
 const weSupportAstro = true;
 ---
 
-<h1>Hey, what theme is that? Looks nice!</h1>
+<h1>Hey, qué tema es ese? Se ve bien!</h1>
 ```
+
+```javascript
+// Y también JavaScript
+function demostrarMDX() {
+  console.log("MDX es increíble!");
+  return "Contenido + Componentes = 🚀";
+}
+```
+
+---
+
+<style>{`
+  body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    color: #667eea;
+    margin-top: 2rem;
+  }
+
+  a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  code {
+    background: #f4f4f4;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background: #2d2d2d;
+    padding: 1.5rem;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+
+  pre code {
+    background: none;
+    color: #f8f8f2;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+`}</style>

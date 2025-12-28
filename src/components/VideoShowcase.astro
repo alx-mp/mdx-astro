@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+  videoUrl?: string;
+  posterImage?: string;
+  description?: string;
+}
+
+const { title, videoUrl, posterImage, description } = Astro.props;
+---
+
+<div class="video-showcase">
+  <div class="video-container">
+    {videoUrl ? (
+      <video
+        controls
+        poster={posterImage}
+        class="showcase-video"
+      >
+        <source src={videoUrl} type="video/mp4" />
+        Tu navegador no soporta el elemento de video.
+      </video>
+    ) : posterImage ? (
+      <img src={posterImage} alt={title} class="showcase-image" />
+    ) : (
+      <div class="video-placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <p>Video Demo</p>
+      </div>
+    )}
+  </div>
+  <div class="video-info">
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+  </div>
+</div>
+
+<style>
+  .video-showcase {
+    margin: 3rem 0;
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+  .showcase-video,
+  .showcase-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .video-placeholder {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 1rem;
+  }
+
+  .video-placeholder svg {
+    opacity: 0.8;
+  }
+
+  .video-placeholder p {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .video-info {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .video-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .video-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .video-showcase {
+      padding: 1.5rem;
+    }
+
+    .video-info h3 {
+      font-size: 1.5rem;
+    }
+
+    .video-info p {
+      font-size: 1rem;
+    }
+  }
+</style>

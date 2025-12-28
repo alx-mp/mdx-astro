@@ -1,0 +1,245 @@
+---
+layout: ../layouts/ProductLayout.astro
+title: "Zapatillas Ultra Comfort Pro"
+---
+
+import ProductHeader from '../components/ProductHeader.astro';
+import InstaStories from '../components/InstaStories.jsx';
+import ProductSection from '../components/ProductSection.astro';
+import VideoShowcase from '../components/VideoShowcase.astro';
+
+<ProductHeader
+  productName="Zapatillas Ultra Comfort Pro"
+  price={89.99}
+  oldPrice={149.99}
+  rating={4.9}
+  reviews={2847}
+  mainImage="/images/producto-principal.svg"
+  badges={["Bestseller", "Envío 24h", "Eco-Friendly"]}
+>
+  <ul slot="features">
+    <li>✨ **Tecnología de Amortiguación Avanzada** - Comodidad durante todo el día</li>
+    <li>🌊 **Resistente al Agua** - Protección contra lluvia y humedad</li>
+    <li>🌱 **Material Sostenible** - 100% reciclable y eco-friendly</li>
+    <li>⚡ **Ultra Ligeras** - Solo 180g por zapato</li>
+    <li>🎨 **Diseño Versátil** - Perfectas para cualquier ocasión</li>
+  </ul>
+</ProductHeader>
+
+---
+
+## El Poder de MDX: Contenido + Componentes Interactivos
+
+Aquí es donde MDX brilla. Puedes escribir contenido en **Markdown normal** como este párrafo, con *énfasis*, listas y todo lo que conoces. Pero luego...
+
+<InstaStories
+  client:load
+  historias={[
+    {
+      thumb: '/images/thumb1.svg',
+      titulo: 'Amortiguación',
+      descripcion: 'Tecnología de última generación para máximo confort'
+    },
+    {
+      thumb: '/images/thumb2.svg',
+      titulo: 'Durabilidad',
+      descripcion: 'Materiales premium que duran años'
+    },
+    {
+      thumb: '/images/thumb3.svg',
+      titulo: 'Diseño',
+      descripcion: 'Estilo moderno para todas las ocasiones'
+    }
+  ]}
+/>
+
+¿Ves cómo acabamos de insertar un componente interactivo estilo Instagram Stories **en medio del contenido**? Eso es MDX. Sin embargo, el contenido sigue siendo legible y fácil de editar.
+
+---
+
+<ProductSection
+  title="Tecnología de Amortiguación Cloud"
+  image="/images/feature-image.svg"
+  imageAlt="Tecnología Cloud"
+  background="gradient"
+>
+
+**Camina sobre nubes** con nuestra exclusiva tecnología de amortiguación Cloud Foam.
+
+Desarrollada tras 3 años de investigación, esta espuma de alta densidad se adapta perfectamente a la forma de tu pie, distribuyendo el peso de manera uniforme y reduciendo el impacto en cada paso.
+
+### Beneficios Clave:
+
+- Reduce la fatiga en un 67%
+- Mejora la postura natural
+- Absorbe el 95% del impacto
+- Mantiene su forma por más de 5 años
+
+</ProductSection>
+
+<ProductSection
+  title="Diseño Impermeable Inteligente"
+  image="/images/feature-image.svg"
+  imageAlt="Diseño Impermeable"
+  reverse={true}
+  background="dots"
+>
+
+**Mantén tus pies secos** en cualquier clima. Nuestra membrana transpirable repele el agua mientras permite que el aire circule, evitando la acumulación de humedad y malos olores.
+
+### Características Técnicas:
+
+- Membrana hidrofóbica de 3 capas
+- Transpirabilidad: 8,000 g/m²/24h
+- Resistencia al agua: 10,000 mm
+- Costuras selladas térmicamente
+
+*Probado en condiciones extremas durante 100,000 pasos bajo lluvia intensa.*
+
+</ProductSection>
+
+---
+
+## Video Demostrativo
+
+<VideoShowcase
+  title="Mira las Zapatillas en Acción"
+  posterImage="/images/abstract-shape.svg"
+  description="Descubre cómo nuestras zapatillas transforman tu experiencia diaria. Desde la ciudad hasta el campo, están diseñadas para acompañarte en cada aventura."
+/>
+
+---
+
+<ProductSection
+  title="Sostenibilidad sin Compromiso"
+  image="/images/feature-image.svg"
+  imageAlt="Eco Friendly"
+  background="waves"
+>
+
+**Cuida el planeta** mientras disfrutas del máximo confort. Cada par de zapatillas está fabricado con materiales 100% reciclados y reciclables.
+
+### Nuestro Compromiso Ambiental:
+
+1. **0% Plásticos Vírgenes** - Usamos solo materiales reciclados post-consumo
+2. **Producción Carbono Neutral** - Compensamos el 100% de nuestras emisiones
+3. **Packaging Biodegradable** - Empaque que se descompone en 90 días
+4. **Programa de Reciclaje** - Devuelve tus zapatillas viejas y recibe 20% de descuento
+
+> "Por cada par vendido, plantamos un árbol en áreas deforestadas" - *Compromiso Green Future*
+
+</ProductSection>
+
+---
+
+## Lo Que Dicen Nuestros Clientes
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+
+<div style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); padding: 2rem; border-radius: 15px; border-left: 4px solid #667eea;">
+
+### ⭐⭐⭐⭐⭐
+
+"**Las mejores zapatillas que he tenido**. La amortiguación es increíble, puedo caminar todo el día sin sentir cansancio."
+
+— *María González, Madrid*
+
+</div>
+
+<div style="background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%); padding: 2rem; border-radius: 15px; border-left: 4px solid #f5576c;">
+
+### ⭐⭐⭐⭐⭐
+
+"**Impresionante calidad** y el hecho de que sean ecológicas es un plus enorme. Las recomiendo 100%."
+
+— *Carlos Rodríguez, Barcelona*
+
+</div>
+
+<div style="background: linear-gradient(135deg, #4facfe15 0%, #00f2fe15 100%); padding: 2rem; border-radius: 15px; border-left: 4px solid #4facfe;">
+
+### ⭐⭐⭐⭐⭐
+
+"**Super cómodas y versátiles**. Las uso para correr, para el trabajo y para salir. ¡Perfectas!"
+
+— *Ana Martínez, Valencia*
+
+</div>
+
+</div>
+
+---
+
+## Especificaciones Técnicas
+
+| Característica | Detalle |
+|---------------|---------|
+| **Peso** | 180g por zapato (talla 42) |
+| **Material Superior** | Malla transpirable reciclada |
+| **Suela** | Goma EVA de alta tracción |
+| **Plantilla** | Cloud Foam extraíble |
+| **Resistencia al Agua** | 10,000mm |
+| **Tallas Disponibles** | 36 - 48 (incluye medias tallas) |
+| **Colores** | Negro, Blanco, Gris, Azul Navy |
+| **Garantía** | 2 años |
+
+---
+
+## Preguntas Frecuentes
+
+### ¿Son realmente impermeables?
+
+Sí, cuentan con certificación IPX4. Pueden soportar lluvia intensa y salpicaduras, aunque no están diseñadas para sumergirse completamente en agua.
+
+### ¿Cómo debo limpiarlas?
+
+Simplemente limpia con un paño húmedo y jabón suave. La membrana impermeable facilita la limpieza. **No** uses lavadora ni secadora.
+
+### ¿Vienen con garantía?
+
+Absolutamente. Ofrecemos **2 años de garantía** contra defectos de fabricación. Si hay algún problema, te enviamos un par nuevo sin costo.
+
+### ¿Cuánto tarda el envío?
+
+- **España Península**: 24-48h
+- **Islas Baleares**: 3-5 días
+- **Canarias**: 5-7 días
+- **Internacional**: 7-14 días
+
+---
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 20px; text-align: center; margin: 3rem 0;">
+
+## ¿Listo para la Máxima Comodidad?
+
+### Oferta Especial: 40% OFF + Envío Gratis
+
+Solo por tiempo limitado. **2,847 personas** están viendo este producto ahora.
+
+<button style="background: white; color: #667eea; border: none; padding: 1.2rem 3rem; border-radius: 50px; font-size: 1.2rem; font-weight: 700; cursor: pointer; margin-top: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+  Comprar Ahora - $89.99
+</button>
+
+<p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">
+✓ Garantía de 30 días - Devolución gratis<br/>
+✓ Pago seguro con cifrado SSL<br/>
+✓ 2,847 reseñas de 5 estrellas
+</p>
+
+</div>
+
+---
+
+## Esto es el Poder de MDX
+
+Como puedes ver, acabamos de crear una **página de producto completa** mezclando:
+
+1. **Markdown simple** - Para texto, listas, tablas, citas
+2. **Componentes Astro** - Para secciones reutilizables con animaciones
+3. **Componentes React/Preact** - Para interactividad (como las historias de Instagram)
+4. **HTML/CSS inline** - Cuando necesitas algo específico
+5. **Frontmatter** - Para metadata y configuración
+
+Todo en un **solo archivo limpio y legible**. Si fueras un editor de contenido sin conocimientos técnicos, podrías editar fácilmente el texto, cambiar precios, actualizar testimonios, etc., sin tocar el código complejo de los componentes.
+
+**Eso es MDX**: El equilibrio perfecto entre contenido y código.
